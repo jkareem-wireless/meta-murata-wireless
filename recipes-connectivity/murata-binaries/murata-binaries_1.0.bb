@@ -10,17 +10,9 @@ SRC_URI = " \
 	git://github.com/murata-wireless/cyw-bt-patch;protocol=http;branch=zeus-zigra;destsuffix=cyw-bt-patch;name=cyw-bt-patch \
 	git://github.com/murata-wireless/cyw-fmac-utils-imx32;protocol=http;branch=zigra;destsuffix=cyw-fmac-utils-imx32;name=cyw-fmac-utils-imx32 \
 	git://github.com/murata-wireless/cyw-fmac-utils-imx64;protocol=http;branch=zigra;destsuffix=cyw-fmac-utils-imx64;name=cyw-fmac-utils-imx64 \
-	git://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git;protocol=http;branch=master \
-	file://WlanCalData_ext_DB_W8997_1YM_ES2_Rev_C.conf \
-	file://switch_module.sh \
 	file://cyfmac54591-pcie.txt \
 	file://BCM4359D0.004.001.016.0200.hcd \
 "
-SRC_URI += " \
-           ${IMX_FIRMWARE_SRC};branch=master;destsuffix=imx-firmware;name=imx-firmware \
-"
-SRCREV_imx-firmware = "685ace656284167376241c804827f046b984ce25"
-
 
 SRCREV_cyw-fmac-fw="52174a18134c7ef4a674ecd9fb68fc6e2bced969"
 SRCREV_cyw-fmac-nvram="45fe43ad51ad47a0c57ad307db3e87da766bf61e"
@@ -138,8 +130,7 @@ FILES_${PN} += "${bindir}"
 FILES_${PN} += "${sbindir}"
 FILES_${PN} += "{sysconfdir}/firmware"
 FILES_${PN} += "/lib"
-FILES_${PN} += "{sysconfdir}/firmware/nxp"
-#FILES_${PN} += "/usr/sbin/wpa_supplicant"
+
 
 FILES_${PN}-mfgtest = " \
 	/usr/bin/wl \
@@ -147,4 +138,3 @@ FILES_${PN}-mfgtest = " \
 
 INSANE_SKIP_${PN} += "build-deps"
 INSANE_SKIP_${PN} += "file-rdeps"
-
