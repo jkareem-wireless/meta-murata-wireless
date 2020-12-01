@@ -15,7 +15,7 @@ SRC_URI =  " \
     file://0004-makefile-yacc-flex-update.patch;apply=yes \
     file://0005-1XA-fix.patch;apply=yes \
 "
-SRCREV = "964fd62d81043d906a45521c8d471514a9d9eaa4"
+SRCREV = "f734f2d1bdf1ff401e561093201c3b78ebad10c9"
 S = "${WORKDIR}/git"
 
 
