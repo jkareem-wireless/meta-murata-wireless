@@ -327,7 +327,7 @@ index 2e911d4..0cd5b43 100644
  #include "bus.h"
  #include "debug.h"
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
-index 94edc41..ad62920 100644
+index 94edc41..2ae6548 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
 +++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
 @@ -25,11 +25,11 @@
@@ -347,6 +347,15 @@ index 94edc41..ad62920 100644
  #include "sdio.h"
  #include "chip.h"
  #include "firmware.h"
+@@ -108,7 +108,7 @@ struct rte_console {
+ };
+ 
+ #endif				/* DEBUG */
+-#include <chipcommon.h>
++#include "../include/chipcommon.h"
+ 
+ #include "bus.h"
+ #include "debug.h"
 diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c
 index bd717da..b3b84e0 100644
 --- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/usb.c
