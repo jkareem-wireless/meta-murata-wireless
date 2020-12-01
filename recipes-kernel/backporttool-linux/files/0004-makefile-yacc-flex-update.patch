@@ -1,3 +1,15 @@
+diff --git a/Makefile b/Makefile
+index ee7df4b..ba9c1c4 100644
+--- a/Makefile
++++ b/Makefile
+@@ -3,7 +3,6 @@
+ #
+ 
+ ifeq ($(KERNELRELEASE),)
+-
+ MAKEFLAGS += --no-print-directory
+ SHELL := /bin/bash
+ BACKPORT_DIR := $(shell pwd)
 diff --git a/Makefile.real b/Makefile.real
 index 6550802..cd90a40 100644
 --- a/Makefile.real
